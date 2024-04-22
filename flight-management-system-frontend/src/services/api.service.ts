@@ -4,9 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { IFlight } from "src/interfaces/flight.interface";
 import { IAddFlightParams } from "src/interfaces/api/add-flight.interface";
 
-@Injectable({
-    providedIn: 'root'   
-})
+@Injectable()
 export class ApiService{
     private baseUrl = "http://localhost:5019/Flight"
     //token is left for development purposes, ideally it would be obtained from an authentication server or another provider

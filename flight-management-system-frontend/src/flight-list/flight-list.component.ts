@@ -54,7 +54,6 @@ export class FlightListComponent {
       data: {flight, isEdit: true}
     });
     const sub = dialogRef.afterClosed().subscribe(editedFlight => {
-      debugger
       if(editedFlight){
         this.flightService.modifyFlight(editedFlight).then(
           (_flight) => {
