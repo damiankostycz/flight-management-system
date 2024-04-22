@@ -1,0 +1,27 @@
+<div *ngIf="!isLoading ; else loading" class="div-container">
+    <h2>Flights</h2>
+    <table>
+      <tr class="column-header">
+        <td><strong>ID</strong></td>
+        <td><strong>Numer lotu</strong></td>
+        <td><strong>Data wylotu</strong></td>
+        <td><strong>Z</strong></td>
+        <td><strong>Do</strong></td>
+        <td><strong>Typ samolotu</strong></td>
+      </tr>
+      <tr *ngFor="let flight of flights">
+        <td>{{ flight.flightId }}</td>
+        <td>{{ flight.flightNumber }}</td>
+        <td>{{ flight.departureDate | date:'dd-MM-yyyy' }}</td>
+        <td>{{ flight.departureLocation }}</td>
+        <td>{{ flight.arrivalLocation }}</td>
+        <td>{{ flight.planeType }}</td>
+        <td><button mat-flat-button color="primary" (click)="editFlight(flight)">Edytuj</button></td>
+        <td><button mat-flat-button color="warn" (click)="deleteFlight(flight.flightId)">Usuń</button></td>
+
+      </tr>
+    </table>
+    <button mat-flat-button color="primary" (click)="addFlight()">Dodaj lot</button>
+  </div>
+  <ng-template #loading>Loading flights...</ng-template>
+  

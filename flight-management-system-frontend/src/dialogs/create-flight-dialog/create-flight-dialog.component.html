@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>{{ data.isEdit ? 'Edytuj lot' : 'Dodaj lot' }}</h2>
+<mat-dialog-content class="form-container">
+  <mat-form-field >
+    <mat-label>Flight number</mat-label>
+    <input matInput [(ngModel)]="flightToCreate.flightNumber">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Departure date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="flightToCreate.departureDate">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Departure location</mat-label>
+    <input matInput [(ngModel)]="flightToCreate.departureLocation">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Arrival location </mat-label>
+    <input matInput [(ngModel)]="flightToCreate.arrivalLocation">
+  </mat-form-field>
+  <mat-form-field>
+        <mat-label>Plane type</mat-label>
+        <mat-select [(value)]="flightToCreate.planeType">
+            <mat-option *ngFor="let planeType of planeTypes" [value]="planeType">{{planeType}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button color="primary" (click)="onNoClick()">Wróć</button>
+  <button mat-raised-button color="primary" (click)="onClose()" cdkFocusInitial [disabled]="!areFieldsValid()" class="on-close-button">  
+    {{ data.isEdit ? 'Edytuj' : 'Dodaj' }}
+  </button>
+  <div class="alert-div" *ngIf="!areFieldsValid()" >Proszę uzupełnić wszystkie pola</div>
+
+</mat-dialog-actions>
+

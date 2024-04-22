@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lot.FlightManagementSystem.WebApi", "Lot.FlightManagementSystem.WebApi\Lot.FlightManagementSystem.WebApi.csproj", "{D365B678-1581-4413-B376-457D7FAA12BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lot.FlightManagementSystem.Tests", "Lot.FlightManagementSystem.Tests\Lot.FlightManagementSystem.Tests.csproj", "{E1CC97F2-0816-47A1-B81C-F5B8833C81F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D365B678-1581-4413-B376-457D7FAA12BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D365B678-1581-4413-B376-457D7FAA12BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D365B678-1581-4413-B376-457D7FAA12BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D365B678-1581-4413-B376-457D7FAA12BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1CC97F2-0816-47A1-B81C-F5B8833C81F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1CC97F2-0816-47A1-B81C-F5B8833C81F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1CC97F2-0816-47A1-B81C-F5B8833C81F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1CC97F2-0816-47A1-B81C-F5B8833C81F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE0AB5C1-851F-4151-943B-A450169D9379}
+	EndGlobalSection
+EndGlobal
